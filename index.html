@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>JPR.RAW — Photography</title>
+  <meta name="description" content="JPR.RAW — photography and short-form video in New Jersey. Frames of life. Stories in light.">
+  <meta name="theme-color" content="#080808">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Open Graph: after publishing, replace the image URL with the full https://USERNAME.github.io/REPOSITORY/assets/og.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JPR.RAW — Photography">
+  <meta property="og:description" content="Frames of life. Stories in light.">
+  <meta property="og:image" content="assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="image" href="assets/images/hero/dsc0097-828.webp" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero/dsc0099-1440.webp" media="(min-width: 768px)" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to the work</a>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="JPR.RAW — home">JPR.RAW</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO: files live in assets/images/hero/ (mobile = dsc0097, desktop = dsc0099) -->
+    <section id="home" class="hero" aria-label="Introduction">
+      <picture>
+        <source media="(min-width: 768px)" width="2400" height="1350" srcset="assets/images/hero/dsc0099-1440.webp 1440w, assets/images/hero/dsc0099-2400.webp 2400w" sizes="100vw">
+        <img src="assets/images/hero/dsc0097-828.webp" srcset="assets/images/hero/dsc0097-828.webp 828w, assets/images/hero/dsc0097-1440.webp 1440w" sizes="100vw" width="1449" height="2576" fetchpriority="high" decoding="async" alt="Sunlight flaring through tall trees beside a round green house.">
+      </picture>
+      <div class="hero-copy">
+        <h1 class="wordmark">JPR.RAW</h1>
+        <p class="tagline">Frames of life. Stories in light.</p>
+        <a class="cta ulink" href="#work">Explore the work</a>
+      </div>
+      <span class="scroll" aria-hidden="true"></span>
+    </section>
+
+    <section id="work" class="section" aria-labelledby="work-title">
+      <div class="wrap">
+        <p class="eyebrow">Selected Work</p>
+        <h2 id="work-title" class="sr-only">Selected Work</h2>
+        <div id="filters" class="filters" role="group" aria-label="Filter by category"></div>
+      </div>
+      <ul id="gallery" class="gallery"></ul>
+    </section>
+
+    <section id="plans" class="section" aria-labelledby="plans-title">
+      <div class="wrap">
+        <p class="eyebrow">Session Plans</p>
+        <h2 id="plans-title" class="display"></h2>
+        <p id="plans-intro" class="prose"></p>
+        <div id="plans-groups"></div>
+        <div id="addons" class="sub"></div>
+        <div id="policies" class="sub"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section narrow" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title" class="display"></h2>
+        <div id="about-body" class="prose"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section narrow" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title" class="display">Let’s talk.</h2>
+        <ul id="contact-list" class="contact-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="brand-sm">JPR.RAW</span>
+    <small>© <span id="year">2026</span> JPR.RAW. All photographs reserved.</small>
+  </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photograph viewer" hidden>
+    <div class="lb-top">
+      <span id="lb-count" class="lb-count" aria-live="polite"></span>
+      <button id="lb-close" class="icon-btn" type="button" aria-label="Close viewer">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="lb-stage"><img id="lb-img" alt="" decoding="async"></div>
+    <button id="lb-prev" class="icon-btn nav prev" type="button" aria-label="Previous photograph">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 4l-8 8 8 8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button id="lb-next" class="icon-btn nav next" type="button" aria-label="Next photograph">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 4l8 8-8 8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <p id="lb-cap" class="lb-cap"></p>
+  </div>
+
+  <noscript><p class="noscript">JPR.RAW works best with JavaScript enabled.</p></noscript>
+  <script src="assets/js/portfolio.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
